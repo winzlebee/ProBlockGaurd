@@ -34,7 +34,7 @@ public class PBGPListener extends PlayerListener {
             if (!player.hasPermission("PBG.create.wand")) {
                 return;
             }
-            if (!(player.getItemInHand().getTypeId() == configs.getInt("selections.tool_id"))) {
+            if (!(player.getItemInHand().getTypeId() == configs.getInt("selection.tool_id"))) {
                 return;
             }
             Block block = event.getClickedBlock();
@@ -45,7 +45,7 @@ public class PBGPListener extends PlayerListener {
             if (!player.hasPermission("PBG.create.wand")) {
                 return;
             }
-            if (!(player.getItemInHand().getTypeId() == configs.getInt("selections.tool_id"))) {
+            if (!(player.getItemInHand().getTypeId() == configs.getInt("selection.tool_id"))) {
                 return;
             }
             Block block = event.getClickedBlock();
