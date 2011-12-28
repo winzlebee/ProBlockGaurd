@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
 import me.wizzledonker.plugins.problockgaurd.ProBlockGaurd;
 import org.bukkit.ChatColor;
 
-public class ProBlockConfigHelper {
+public class ProBlockConfigHelper extends ProBlockConfigManager {
     Calendar calendar = new GregorianCalendar();
     public static ProBlockGaurd plugin;
     
@@ -33,7 +33,7 @@ public class ProBlockConfigHelper {
     }
     
     public String getPluginName() {
-        return ChatColor.BLUE + "[" + plugin + "]";
+        return ChatColor.BLUE + "[" + plugin + "] ";
     }
     
     public String getStrings(String message) {
@@ -72,6 +72,16 @@ public class ProBlockConfigHelper {
             plugin.getConfig().options().copyHeader(true);
             plugin.getConfig().options().copyDefaults(true);
         }
+        if (!new File(plugin.getDataFolder(), "regions.yml").exists()) {
+            getRegionsConfig().options().header("ProBlockGaurd Regions File (regions.yml)");
+            getRegionsConfig().options().header("I do not recommend editing this file manually.");
+            
+            //Copy the header
+            getRegionsConfig().options().copyHeader(true);
+        }
+        
+        plugin.saveConfig();
+        saveRegionsConfig();
         
         System.out.println(plugin + " has loaded the config file.");
     }

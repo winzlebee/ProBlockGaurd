@@ -7,7 +7,6 @@ package me.wizzledonker.plugins.problockgaurd.listeners;
 import me.wizzledonker.plugins.problockgaurd.ProBlockGaurd;
 import me.wizzledonker.plugins.problockgaurd.regions.RegionManager;
 import me.wizzledonker.plugins.problockgaurd.util.ProBlockConfigHelper;
-import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.Action;

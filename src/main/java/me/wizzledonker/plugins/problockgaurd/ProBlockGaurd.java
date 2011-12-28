@@ -7,11 +7,11 @@ public class ProBlockGaurd extends JavaPlugin {
     ProBlockConfigHelper strings = new ProBlockConfigHelper(this);
 
     public void onEnable() {
-        System.out.println(strings.getPluginName() + " has been successfully initialised on server!");
+        System.out.println(strings.getPluginName() + "has been successfully initialised on server!");
     }
     
     public void onDisable() {
-        System.out.println(strings.getPluginName() + " has been disabled on server.");
+        System.out.println(strings.getPluginName() + "has been disabled on server.");
     }
 
 }
